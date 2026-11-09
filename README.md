@@ -1,2 +1,2 @@
-# Projekti_2_ET
-Projekti 2 syksy 2026
+# Faceit stat finder
+Erno Tyrylahti ja Max Mäntymäki
