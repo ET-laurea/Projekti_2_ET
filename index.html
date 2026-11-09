@@ -7,16 +7,19 @@
     <title>Projekti 2</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Faceit player stats</h1>
-
+    <header>
+        <h1>PC game deal finder</h1>
         <div class="search-container">
-            <input type="text" id="username" placeholder="Enter Faceit nickname">
-            <button id="search-btn">Search</button>
+            <input type="text" id="searchInput" placeholder="Search for a game...">
+            <button id="searchBtn">Search</button>
         </div>
 
-        <div id="stats-container"></div>
-    </div>
+    </header>
+
+    <main>
+        <!-- 3. Container where the selected data will be displayed -->
+        <div id="resultsContainer" class="results-grid"></div>
+    </main>
 
     <script src="js/script.js"></script>
 
