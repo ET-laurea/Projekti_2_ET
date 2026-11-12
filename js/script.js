@@ -89,4 +89,3 @@ function displayResults(deals) {
         resultsContainer.appendChild(card);
     });
 }
-
