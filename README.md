@@ -33,7 +33,7 @@ PC Game Deal Finder on verkkosovellus, joka auttaa käyttäjää löytämään h
 
 ## Linkit
 - Julkaistu sovellus:
-- Github-repositorio:
+- Github-repositorio: [main](https://github.com/ET-laurea/Projekti_2_ET/tree/main)
 - Projektin videoesittely:
 
 ## Lähteet
