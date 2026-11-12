@@ -1,13 +1,13 @@
-// Select the UI elements from the DOM
+// UI elementit
 const searchInput = document.querySelector('#searchInput');
 const searchBtn = document.querySelector('#searchBtn');
 const resultsContainer = document.querySelector('#resultsContainer');
 const exactMatchCheck = document.querySelector('#exactMatchCheck');
 
-// REQUIREMENT: All event handlers should be added dynamically
+// Lisätään tapahtumankuuntelija hakupainikkeelle
 searchBtn.addEventListener('click', performSearch);
 
-// Optional: Allow pressing "Enter" in the input field to trigger the search
+// Parempaa käytettävyyttä varten, sallitaan myös Enter-näppäimen käyttö hakemiseen
 searchInput.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         performSearch();
@@ -16,13 +16,13 @@ searchInput.addEventListener('keypress', function(event) {
 
 function performSearch() {
     const query = searchInput.value.trim();
-    if (!query) return; // Prevent empty searches
+    if (!query) return; // Estää tyhjän haun
 
-    // Show a loading message while waiting for the live server
+    // Näyttää lataustekstin, kunnes serveriltä saadaan vastaus
     resultsContainer.innerHTML = '<p class="loading">Fetching live deals...</p>';
 
-    // 1. Request data (Ajax call) from selected API
-    // We use encodeURIComponent to safely format game titles with spaces (e.g. "Grand Theft Auto")
+    // 1. hae data CheapShark API:sta käyttäen fetch-funktiota
+    // encodeURIComponent varmistaa, että haun sisältämät erikoismerkit ovat oikein muotoiltuja URL:ssä
     const apiUrl = `https://www.cheapshark.com/api/1.0/deals?title=${encodeURIComponent(query)}`;
 
     fetch(apiUrl)
@@ -33,17 +33,17 @@ function performSearch() {
             return response.json(); 
         })
         .then(data => {
-            // 2. Default to showing all data
+            // 2. Tallenna alkuperäinen data muuttujaan finalData
             let finalData = data; 
 
-            // 3. If the checkbox is checked, overwrite finalData with the filtered version
+            // 3. Jos "Exact Match" -valintaruutu on valittuna, suodatetaan data niin, että vain tarkat yhteensopivat tulokset säilyvät
             if (exactMatchCheck.checked) {
                 finalData = data.filter(deal => 
                     deal.title.toLowerCase() === query.toLowerCase()
                 );
             }
 
-            // 4. Display whatever is in finalData
+            // 4. Näytetään suodatettu data selaimessa
             displayResults(finalData); 
         })
         .catch(error => {
@@ -52,25 +52,26 @@ function performSearch() {
         });
 }
 
-// 3. Display the selected data and make it look nice on the browser
+// 3. Näytetään suodatettu data selaimessa
 function displayResults(deals) {
-    // Clear the loading text
+    // Poistetaan aiemmat tulokset ennen uusien näyttämistä
     resultsContainer.innerHTML = '';
 
-    // Handle the case where the API returns an empty array
+    // Jos ei löydy yhtään tarjousta, näytetään käyttäjälle viesti
     if (deals.length === 0) {
         resultsContainer.innerHTML = '<p>No deals found for that game. Try another title!</p>';
         return;
     }
 
-    // Loop through the saved data and dynamically build the HTML for each deal
+    // Luodaan kortti jokaiselle löydetylle tarjoukselle
     deals.forEach(deal => {
-        // Create the main card container
+        // Luodaan uusi div-elementti tarjouksen kortille
         const card = document.createElement('div');
         card.className = 'deal-card';
 
-        // Select specific data points: thumb, title, salePrice, normalPrice, savings, and dealID
-        // We use CheapShark's redirect link to properly send the user to the store
+        // Valitaan tarjouksen tiedot ja lisätään ne korttiin
+        // Käytetään template literal -syntaksia, jotta voimme helposti lisätä muuttujien arvot HTML:ään
+        // cheapsharkin API tarjoaa dealID:n, jota käytetään linkin muodostamiseen, jotta käyttäjä voi siirtyä suoraan tarjouksen sivulle
         card.innerHTML = `
             <img src="${deal.thumb}" alt="${deal.title} cover image" class="deal-image">
             <div class="deal-content">
@@ -84,7 +85,7 @@ function displayResults(deals) {
             </div>
         `;
 
-        // Append the newly created element to the container
+        // Lisää valmiin kortin sivulle näkyviin tulosalueen sisään
         resultsContainer.appendChild(card);
     });
 }
