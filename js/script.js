@@ -80,7 +80,7 @@ function displayResults(deals) {
                     <span class="sale-price">$${deal.salePrice}</span>
                     <span class="normal-price">$${deal.normalPrice}</span>
                 </div>
-                <p class="savings">You save: ${Math.round(deal.savings)}%</p>
+                <p class="savings">You save: ${Math.round(deal.savings)}%!!!</p>
                 <a href="https://www.cheapshark.com/redirect?dealID=${deal.dealID}" target="_blank" class="buy-btn">View Deal</a>
             </div>
         `;

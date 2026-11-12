@@ -1,0 +1,122 @@
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: 1px solid #0d6efd;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+}
+
+/* Cards */
+
+/* Tulosten asettelu */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 25px;
+}
+
+.deal-card {
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.savings {
+    color: #198754;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.buy-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #00c853, #64dd17);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+
+    box-shadow: 0 0 12px rgba(0, 200, 83, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(135deg, #64dd17, #00c853);
+    color: white;
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(0, 200, 83, 0.7);
+}
+
+.deal-image {
+    width: 100%;
+    max-width: 300px;
+    height: 225px;
+    object-fit: contain;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #0d6efd,
+        #00d4ff,
+        #8b5cf6,
+        #0d6efd,
+        #00d4ff,
+        #8b5cf6,
+        #0d6efd,
+        #00d4ff,
+        #8b5cf6,
+        #0d6efd,
+        #00d4ff,
+        #8b5cf6
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    margin-bottom: 25px;
+}
