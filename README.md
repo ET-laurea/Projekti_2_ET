@@ -32,9 +32,13 @@ PC Game Deal Finder on verkkosovellus, joka auttaa käyttäjää löytämään h
 - API: käytetään datan haun lähteenä eri sivulta
 
 ## Linkit
-- Julkaistu sovellus:
+- Julkaistu sovellus: [Sovellus](https://et-laurea.github.io/Projekti_2_ET/)
 - Github-repositorio: [main](https://github.com/ET-laurea/Projekti_2_ET/tree/main)
-- Projektin videoesittely:
+- Projektin videoesittely: [Video](https://video.laurea.fi/media/PC+Game+Deal+Finder/0_lg7g3p3c)
+
+## Arviointi
+Projektin työstäminen lähti aluksi meillä pienellä epäonnella, kun alkuperäinen ideamme kaatui siihen ettemme saaneet sivuston API:ta toimimaan ja sen toimimaan saaminen olisi vaatinut meiltä kurssin ulkopuolisten asioiden, esim. back end kehitykseen liittyviä tekniikoita joten hylkäsimme sen. Alkuperäinen idea olisi ollut kolmannen osapuolen pelialusta FACEIT API:n käyttö ja sitä kautta pelaajien tilastojen seuraaja sovellus. Keksimme kuitenkin nopeasti uuden idean ja löysimme CheapSharkin vapaiden API:den github listasta ja teimme sen pohjalta sovelluksen. Onnistuimme mielestäni ideoinnissa hyvin ja saimme käytännössä sovellukseen kaiken mitä ideointivaiheessa mietimme. Sovellus ajaa sen tarkoituksensa ja on visuaalisesti selkeä ja myös responsiivinen. Minä ja Erno molemmat osallistuimme taas yhdessä hyvin tasavertaisesti. Aloimme työstämään sovellusta yhdessä, jonka jälkeen minä viimeistelin Javascriptin sovellukseen ja Erno teki CSS:än ja muutamat viimeistelyt jonka jälkeen katsoimme yhdessä että kaikki toimii. Pieniä muutoksia sovellukseen olisi voinut olla javascriptin puolella, kuten parempi haun filteröinti metodi mutta muuten sovellus on mielestäni hyvä. Javascriptin käyttö ja DOM-skriptaus alkoi myösvähän sujua paremmin ja API:n käytöstä opin paljon. Oma arvio projektista on mielestäni 8.5/10.
+
 
 ## Lähteet
 - **API:n lähde:** [CheapShark API](https://apidocs.cheapshark.com/)
