@@ -16,11 +16,6 @@ Erno Tyrylahti ja Max Mäntymäki
 - Sovellus kun exact match päällä
 <img width="1528" height="722" alt="gamedealfinder_screenshot2" src="https://github.com/user-attachments/assets/86025313-444f-4c98-a613-b68a0a054b87" />
 
-## Arviointi
-Alkuperäinen idea oli tehdä Faceit nimisen pelialustan API:lla nettisivu, jossa voitaisiin tarkastella eri pelaajien tilastoja. Kuitenkin kävi ilmi, että FACEIT API:n käyttö vaatisi sen avaimen sisällyttämistä nettisivun back-endiin, jotta oma avain ei näkyisi kaikille internetissä. Tämän takia päädyimme toiseen vahtoehtoon ja teimme sivuston, jossa voi tarkastella eri pelien tarjouksia hyödyntäen CheapShark API:a. Tämä oli selvästi helpompaa, sillä avaimen pystyi sisällyttämään nettisivun front-endiin eikä sitä tarvinnut piilottaa.
-
-Työnjako meni loppujen lopuksi hyvin. Max hoiti API-avaimen ja ison osan HTML:stä ja JavaScriptistä. Minun osuuteni oli näiden laajentaminen puuttuvilla ominaisuuksilla ja yleinen korjaaminen. Integroin myös CSS:än Bootstrapin avulla ja päätin tyylit. JavaScript ja HTML ovat mielestäni tarpeeksi onnistuneita ja nettisivuston tyyli on eheä.
-
 ## Tietoa sovelluksesta
 PC Game Deal Finder on verkkosovellus, joka auttaa käyttäjää löytämään haluamalleen tietokonepelilleen tarjouksia verkosta. Käyttäjä kirjoittaa hakukenttään haluamansa pelin nimen, jonka jälkeen sovellus etsii tiedoistaan eri nettikauppapaikkoja jossa peli on myynnissä ja jossa sillä on mahdollisesti alennus. Sovellus näyttää mahdollisen alennus %, jonka jälkeen käyttäjä voi vertailla eri sivujen välillä mistä saisi parhaan tarjouksen. Tehdessään päätöksen, käyttäjä painaa vihreää "View deal" nappia, joka vie hänet sivulle josta pelin voi ostaa. Halutessaan käyttäjä voi käyttää "Exact match only" hakua, rajaten valittuja pelejä jota sivu ehdottaa.
 
@@ -37,9 +32,14 @@ PC Game Deal Finder on verkkosovellus, joka auttaa käyttäjää löytämään h
 - API: käytetään datan haun lähteenä eri sivulta
 
 ## Linkit
-- Julkaistu sovellus:
-- Github-repositorio:
+- Julkaistu sovellus: https://et-laurea.github.io/Projekti_2_ET/
+- Github-repositorio: https://github.com/ET-laurea/Projekti_2_ET
 - Projektin videoesittely:
+
+## Arviointi
+Alkuperäinen idea oli tehdä Faceit nimisen pelialustan API:lla nettisivu, jossa voitaisiin tarkastella eri pelaajien tilastoja. Kuitenkin kävi ilmi, että FACEIT API:n käyttö vaatisi sen avaimen sisällyttämistä nettisivun back-endiin, jotta oma avain ei näkyisi kaikille internetissä. Tämän takia päädyimme toiseen vahtoehtoon ja teimme sivuston, jossa voi tarkastella eri pelien tarjouksia hyödyntäen CheapShark API:a. Tämä oli selvästi helpompaa, sillä avaimen pystyi sisällyttämään nettisivun front-endiin eikä sitä tarvinnut piilottaa.
+
+Työnjako meni loppujen lopuksi hyvin. Max hoiti API-avaimen ja ison osan HTML:stä ja JavaScriptistä. Minun osuuteni oli näiden laajentaminen puuttuvilla ominaisuuksilla ja yleinen korjaaminen. Integroin myös CSS:än Bootstrapin avulla ja päätin tyylit. JavaScript ja HTML ovat mielestäni tarpeeksi onnistuneita ja nettisivuston tyyli on eheä.
 
 ## Lähteet
 - **API:n lähde:** [CheapShark API](https://apidocs.cheapshark.com/)
@@ -49,8 +49,3 @@ PC Game Deal Finder on verkkosovellus, joka auttaa käyttäjää löytämään h
 - Tekoälyä käytetty, Google Gemini
 Tekoälyä käytettiin apuna API:n kanssa ilmenneessä ongelmassa, kun hakutulosten saamisessa tuli ongelma. Tekoäly ehdotti encodeURIComponent liittämistä API linkkiin, jotta sovellus tunnistaisi käyttäjän syöttämät erikoismerkit ja välilyönnit ja muuttaisi ne URL-osoitteeseen sopivaan muotoon.
 Tekoälyä käytettiin myös tarkistuksessa, ettei lopullisessa työssä ilmennyt koodivirheitä.
-  
-
-
-
-
